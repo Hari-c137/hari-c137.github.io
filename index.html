@@ -10,7 +10,7 @@
     --color-background: #F2E5BC;
     --color-text-subtle: #282828;
     --color-text: #282828;
-    --font-family: -apple-system, Helvetica, sans-serif;
+    --font-family: iosevka;
     --font-size-1: 1rem;
     --font-size-2: 3rem;
     --font-size-base: clamp(16px, 1.6vw, 18px);
@@ -30,7 +30,85 @@
       --color-text: #000;
     }
   }
+
+.header {
+    padding: 1px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: var(--color-text);
+    padding: var(--space-1) var(--space-2);
+    margin: 1px auto; 
+    width: 95%; 
+    border-radius: 10px;
+  
+    position: fixed; 
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    z-index: 1000; 
+
+  }
+
+  .navbar a {
+    color: var(--color-background);
+    text-decoration: none;
+    font-size: var(--font-size-1);
+    transition: color var(--transition-speed);
+  }
+
+  .navbar a:hover {
+    color: white;
+  }
+  
+    .clock-text {
+    color: var(--color-background);
+    font-size: var(--font-size-1);
+    margin-right: var(--space-2); 
+  }
+
+  .nav-links {
+    display: flex;
+    gap: var(--space-2);
+  }
+
+  .welcome-text {
+    margin-right: auto;
+    color: var(--color-background);
+    font-size: var(--font-size-1);
+  }
+
 </style>
+
+<header>
+  <div class="header"></div>
+  <nav class="navbar">
+        <span id="clock" class="clock-text"></span> <!-- Live Clock -->
+        <span class="welcome-text">Welcome, ClearlyOpaque</span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock(); 
+</script>
 
 <script>
   const CONFIG = {
