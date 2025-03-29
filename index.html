@@ -104,9 +104,28 @@
     const seconds = now.getSeconds().toString().padStart(2, '0');
     document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
   }
-
   setInterval(updateClock, 1000);
   updateClock(); 
+</script>
+
+<script>
+
+function checkDevice() {
+    function validateSize() {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        if (width < 900 || height < 600) {
+            alert("This website is meant for desktop devices only! :(");
+            window.location.replace("https://github.com/Hari-c137");
+        }
+    }
+
+    validateSize();
+    window.addEventListener("resize", validateSize);
+}
+
+checkDevice();
 </script>
 
 <script>
