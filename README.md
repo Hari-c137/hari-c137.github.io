@@ -1,7 +1,6 @@
 
 ## Basic Usage
 
-  [![HitCount](https://hits.dwyl.com/Hari-c137/hari-c137githubio.svg?style=flat-square&show=unique)](http://hits.dwyl.com/Hari-c137/hari-c137githubio)
 
 To go to a site, type the corresponding key and press return. e.g:
 
