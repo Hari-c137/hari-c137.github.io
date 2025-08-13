@@ -1,6 +1,6 @@
 # Overview 
 a minimal,keyboard-driven startpage with smart suggestions for power users and lazy developers..<br>
-password hint: "He Who Cannot Be Named"
+password hint: password is related to 'book of spells' from Harry Potter
 
 # features
 -  d̶u̶m̶b̶ simple password auth at the begining (optional)
