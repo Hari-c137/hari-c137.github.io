@@ -47,18 +47,23 @@
     </div>
 
 <script>
-  const correctPassword = "YWxvaG9tb3Jh"; 
 
-  function checkPassword() {
-    const userPassword = document.getElementById("password").value;
+function checkPassword() {
 
-    if (btoa(userPassword) === correctPassword) {
-      sessionStorage.setItem("clueSolved", "true");
-      window.location.href = "body.html";
-    } else {
-      alert("Wrong password. Try again.");
-    }
+  const correctPassword = "YWxvaG9tb3Jh";
+
+  const userPassword = document.getElementById("password").value;
+  if (btoa(userPassword) === correctPassword) {
+    sessionStorage.setItem("clueSolved", "true");
+    window.location.href = "body.html";
+  } else if (userPassword === correctPassword){
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ"
   }
+    else {
+    alert("Wrong password. Try again.");
+    }
+}
+
 </script>
 
 
