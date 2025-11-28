@@ -35,6 +35,20 @@
             color: #ffffff;
             margin-top: 5px;
         }
+
+        a:link {
+          color: green;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+
+        a:hover {
+          color: white;
+          background-color: transparent;
+          text-decoration: underline;
+       }
+
+
     </style>
 </head>
 <body>
@@ -44,7 +58,7 @@
 
     <div class="container">
         <input type="password" id="password" placeholder="        crack the password" onkeydown="if(event.key === 'Enter') checkPassword()">
-      <div class="hint">Hint: <i>The Book of Spells</i> H.P</div>
+      <div class="hint">Hint: <i> <a href="https://harrypotter.fandom.com/wiki/Book_of_Spells"> The Book of Spells </a> </i> </div>
     </div>
 
 <script>
