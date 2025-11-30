@@ -13,7 +13,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-image: url('src/images/ctw.jpg'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -48,6 +47,24 @@
           text-decoration: underline;
        }
 
+      button {
+        padding: 10px 20px; 
+        background-color: #fffcc8;
+        color: black;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background 0.3s;
+      }
+     button:hover {
+        background-color: #ffffff;
+      }
+     button:active {
+       transform: scale(0.95);
+      }
+
+
 
     </style>
 </head>
@@ -57,12 +74,16 @@
     nerdy enough to look into the source code to figure out the password  -->
 
     <div class="container">
-        <input type="password" id="password" placeholder="        crack the password" onkeydown="if(event.key === 'Enter') checkPassword()">
+        <button onclick="clearPassword()">clear</button>
+        <input type="password" id="password" placeholder="        crack the password" onkeydown="if(event.key === 'Enter') checkPassword()">  <hr>
       <div class="hint">Hint: <i> <a href="https://harrypotter.fandom.com/wiki/Book_of_Spells"> The Book of Spells </a> </i> </div>
     </div>
 
 <script>
 
+function clearPassword() {
+    document.getElementById("password").value = "";
+}
 function checkPassword() {
 
   const correctPassword = "YWxvaG9tb3Jh";
@@ -82,5 +103,19 @@ function checkPassword() {
 </script>
 <script src="./src/js/cat.js" data-cat="./src/images/cat.gif"></script> 
 </body>
+
+<script>
+  var images = [
+  'src/images/34374.gif',
+  'src/images/35479.gif',
+  'src/images/34803.gif',
+  
+  ];
+
+  document.body.style.backgroundImage =
+    'url(' + images[Math.floor(Math.random() * images.length)] + ')';
+</script>
+
+
 </html>
 
