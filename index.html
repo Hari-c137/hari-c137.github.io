@@ -83,6 +83,7 @@
 
 function clearPassword() {
     document.getElementById("password").value = "";
+    location.reload();
 }
 function checkPassword() {
 
@@ -97,6 +98,7 @@ function checkPassword() {
   }
     else {
     alert("Wrong password. Try again.");
+    location.reload();
     }
 }
 
