@@ -85,22 +85,8 @@ function clearPassword() {
     document.getElementById("password").value = "";
     location.reload();
 }
-function checkPassword() {
 
-  const correctPassword = "YWxvaG9tb3Jh";
-
-  const userPassword = document.getElementById("password").value;
-  if (btoa(userPassword) === correctPassword) {
-    sessionStorage.setItem("clueSolved", "true");
-    window.location.href = "body.html";
-  } else if (userPassword === correctPassword){
-    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ"
-  }
-    else {
-    alert("Wrong password. Try again.");
-    location.reload();
-    }
-}
+function checkPassword() { const CORRECT_PASSWORD = "YWxvaG9tb3Jh"; const userPassword = document.getElementById("password").value; if (btoa(userPassword) === CORRECT_PASSWORD) { sessionStorage.setItem("clueSolved", "true"); window.location.href = "body.html"; } else if (userPassword === CORRECT_PASSWORD){ window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ" } else { alert("  YOU ARE NOT WORTHY!  "); location.reload(); } }
 
 </script>
 <script src="./src/js/cat.js" data-cat="./src/images/cat.gif"></script> 
