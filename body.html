@@ -77,8 +77,14 @@
     gap: var(--space-2);
   }
 
-  .welcome-text {
+  .prompt {
     margin-right: auto;
+    color: var(--color-background);
+    font-size: var(--font-size-1);
+  }
+  .welcome-text {
+    display: flex;
+    padding-right: 35%;
     color: var(--color-background);
     font-size: var(--font-size-1);
   }
@@ -89,7 +95,8 @@
   <div class="header"></div>
   <nav class="navbar">
         <span id="clock" class="clock-text"></span> <!-- Live Clock -->
-        <span class="welcome-text"> [type to search]</span>
+        <span class="prompt"> [type to search]</span>
+        <span class="welcome-text"> hey you! </span>
     <div class="nav-links">
       <a href="body.html">Home</a>
       <a href="about.html">About</a>
